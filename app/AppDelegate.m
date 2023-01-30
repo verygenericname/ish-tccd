@@ -277,9 +277,6 @@ void NetworkReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // get the network permissions popup to appear on chinese devices
     [[NSURLSession.sharedSession dataTaskWithURL:[NSURL URLWithString:@"http://captive.apple.com"]] resume];
-    grant_full_disk_access(^(NSError* error) {
-    NSLog(@"grant_full_disk_access returned error: %@", error);
-    });
     if ([NSUserDefaults.standardUserDefaults boolForKey:@"FASTLANE_SNAPSHOT"])
         [UIView setAnimationsEnabled:NO];
 
@@ -326,6 +323,9 @@ void NetworkReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
         currentTerminalViewController = vc;
         [vc startNewSession];
     }
+    grant_full_disk_access(^(NSError* error) {
+    NSLog(@"grant_full_disk_access returned error: %@", error);
+    });
     return YES;
 }
 
