@@ -24,7 +24,7 @@ jobs:
       - name: Build
         if: matrix.kernel == 'ish'
         run: | 
-          xcodebuild -project iSH.xcodeproj -scheme iSH -derivedDataPath "/Users/runner/work/ish-tccd/ish-tccd/build/DerivedDataApp" -configuration Release -arch arm64 -sdk iphoneos CODE_SIGNING_ALLOWED=NO
+          xcodebuild -project iSH.xcodeproj -scheme iSH -derivedDataPath "/Users/runner/work/ish-tccd/build/DerivedDataApp" -configuration Release -arch arm64 -sdk iphoneos CODE_SIGNING_ALLOWED=NO
           mkdir Payload
           cp -r build/DerivedDataApp/Build/Products/Release-iphoneos/iSH.app Payload/
           zip -vr iSH-tccd.ipa Payload
