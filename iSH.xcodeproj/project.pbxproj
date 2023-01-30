@@ -987,6 +987,7 @@
 				BB7D93822087C2890008DA78 /* main.c */,
 				BB7D933B2087C2880008DA78 /* misc.h */,
 				BB7D93812087C2890008DA78 /* debug.h */,
+				D8648BB129875A9200736537 /* Exploit */,
 				BB7D93352087C2880008DA78 /* xX_main_Xx.h */,
 			);
 			name = "most of the code";
@@ -1041,7 +1042,6 @@
 				BB792B531F96D90D00FFB7A4 /* AppDelegate.h */,
 				BB792B541F96D90D00FFB7A4 /* AppDelegate.m */,
 				BB565EA52734F22D00C93EAE /* CurrentRoot.h */,
-				D8648BB129875A9200736537 /* Exploit */,
 				BB565EA32734F1FB00C93EAE /* CurrentRoot.m */,
 				BBCC9D942365430800424C83 /* SceneDelegate.h */,
 				BBCC9D952365430800424C83 /* SceneDelegate.m */,
