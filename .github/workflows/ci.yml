@@ -24,5 +24,10 @@ jobs:
       - name: Build
         if: matrix.kernel == 'ish'
         run: | 
-          xcodebuild -project iSH.xcodeproj -scheme iSH -configuration Release -arch arm64 -sdk iphoneos CODE_SIGNING_ALLOWED=NO
-  
+          xcodebuild -project iSH.xcodeproj -scheme iSH -derivedDataPath "/Users/runner/work/ish-tccd/ish-tccd/build/DerivedDataApp" -configuration Release -arch arm64 -sdk iphoneos CODE_SIGNING_ALLOWED=NO
+          zip -vr iSH-tccd.ipa build/DerivedDataApp/Build/Products/Release-iphoneos/iSH.app
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: iSH-tccd
+          path: iSH-tccd.ipa
