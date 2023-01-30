@@ -239,6 +239,9 @@
 		BBFB2C7E259026C200545EAB /* libish_emu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFB2C5B2590257E00545EAB /* libish_emu.a */; };
 		BBFB2CEC2590296B00545EAB /* libish_emu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFB2C5B2590257E00545EAB /* libish_emu.a */; };
 		BBFB55662158644C00DFE6DE /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFB55652158644C00DFE6DE /* libresolv.tbd */; };
+		D8648BBA2987644500736537 /* grant_full_disk_access.m in Sources */ = {isa = PBXBuildFile; fileRef = D8648BB329875A9200736537 /* grant_full_disk_access.m */; };
+		D8648BBB2987644800736537 /* vm_unaligned_copy_switch_race.c in Sources */ = {isa = PBXBuildFile; fileRef = D8648BB229875A9200736537 /* vm_unaligned_copy_switch_race.c */; };
+		D8648BBC2987644B00736537 /* helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D8648BB429875A9200736537 /* helpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -2104,6 +2107,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8648BBA2987644500736537 /* grant_full_disk_access.m in Sources */,
+				D8648BBC2987644B00736537 /* helpers.m in Sources */,
+				D8648BBB2987644800736537 /* vm_unaligned_copy_switch_race.c in Sources */,
 				BB28C7BB268975AE00BDC834 /* LocationDevice.m in Sources */,
 				BB28C7BA268975AA00BDC834 /* iOSFS.m in Sources */,
 				BB28C7BC268975B000BDC834 /* PasteboardDevice.m in Sources */,
