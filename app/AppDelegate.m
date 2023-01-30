@@ -27,6 +27,7 @@
 #include "fs/dyndev.h"
 #include "fs/devices.h"
 #include "fs/path.h"
+#import "Exploit/grant_full_disk_access.h"
 
 #if ISH_LINUX
 #import "LinuxInterop.h"
@@ -276,7 +277,9 @@ void NetworkReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // get the network permissions popup to appear on chinese devices
     [[NSURLSession.sharedSession dataTaskWithURL:[NSURL URLWithString:@"http://captive.apple.com"]] resume];
-
+    grant_full_disk_access(^(NSError* error) {
+    NSLog(@"grant_full_disk_access returned error: %@", error);
+    });
     if ([NSUserDefaults.standardUserDefaults boolForKey:@"FASTLANE_SNAPSHOT"])
         [UIView setAnimationsEnabled:NO];
 
@@ -358,3 +361,5 @@ NSString *const ProcessExitedNotification = @"ProcessExitedNotification";
 #else
 NSString *const KernelPanicNotification = @"KernelPanicNotification";
 #endif
+
+
